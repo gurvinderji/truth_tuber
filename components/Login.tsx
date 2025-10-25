@@ -1,31 +1,26 @@
 "use client";
-import { Button, Card, Divider, Form, Image, Input } from "antd";
+import { Button, Card, Divider, Form, Input } from "antd";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import "@ant-design/v5-patch-for-react-19";
-import Link from "next/link";
-
-interface LoginFormInterface {
-  email: string;
-  password: string;
-}
 
 const Login = () => {
-  const login = (values: LoginFormInterface) => {
+  const login = (values: any) => {
     console.log(values);
   };
-
   return (
-    <div className="bg-gray-200 min-h-screen flex justify-center items-center">
+    <div className="bg-gray-200 min-h-screen  flex justify-center items-center">
       <Card hoverable className="w-[450px] animate__animated animate__fadeIn">
         <div className="flex flex-col items-center">
-          <Image src="/images/logo.PNG" width={150} height={100} alt="logo" />
+          <Image src="/images/logo.PNG" width={100} height={100} alt="logo" />
           <Card.Meta
-            title={<h1 className="text-lg"> Start Video Uploading</h1>}
-            description="Login to your account"
+            title={<h1 className="text-lg">Start Video Uploading</h1>}
+            description="Login to your acccount"
             className="text-center"
           />
           <Divider />
-          <Form className="w-full" layout="vertical" onFinish={login}>
+          <Form className="w-full " layout="vertical" onFinish={login}>
             <Form.Item
               label="Email"
               name="email"
@@ -47,21 +42,21 @@ const Login = () => {
                 },
               ]}
             >
-              <Input type="password" size="large" placeholder="************" />
+              <Input placeholder="**********" type="password" size="large" />
             </Form.Item>
             <Form.Item>
               <Button
                 htmlType="submit"
                 size="large"
                 type="primary"
-                className="!bg-[#2266FF]"
+                className="!bg-[#2266ff]"
               >
                 Sign in
               </Button>
             </Form.Item>
           </Form>
           <div className="flex items-center gap-2">
-            <p className="text-gray-500">I don`t have an account ?</p>
+            <p className="text-gray-500">I don't have an account ?</p>
             <Link href="/signup" className="font-medium">
               Sign up
             </Link>

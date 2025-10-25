@@ -1,17 +1,16 @@
-import Signup from '@/components/Signup'
-import { Metadata } from 'next'
-import React from 'react'
+import Signup from "@/components/Signup";
+import { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
-    title: "Signup - Tuber",
-    description: "Register now create your first video",
-    keywords: "signin, login, auth, signup, register, acount login, profile login, admin login"
-}
+  title: "Signup-Tuber",
+  description: "Register now create your girst video",
+  keywords:
+    "signin,login,auth,signup,register,account login ,profile login , admin login",
+};
 
 const SignupRouter = () => {
-  return (
-    <Signup />
-  )
-}
+  return <Signup />;
+};
 
-export default SignupRouter
+export default SignupRouter;
